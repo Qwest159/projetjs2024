@@ -4,3 +4,9 @@
   width: 25em !important;
   height: 15em !important;
 }
+.custom-dropdown-toggle {
+  background-color: transparent; /* Suppression de l'arrière-plan */
+  border: none; /* Suppression de la bordure */
+  box-shadow: none; /* Suppression de l'ombre */
+  color: inherit; /* Conserver la couleur du texte */
+}

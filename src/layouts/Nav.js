@@ -18,12 +18,17 @@ export const Nav = (element) => {
    */
   const links = [
     { href: "/", text: "Accueil" },
-    { href: "/categorie", text: "Categories" },
-    { href: "/produits", text: "produits" },
     { href: "/contact", text: "Contact" },
+    { href: "/produits", text: "Produits" },
     { href: "/accordeon", text: "Accordeon" },
   ];
 
+  const linkssousmenu = [
+    { href: "/Categorie/armes", text: "Armes" },
+    { href: "/Categorie/vetements", text: "Vêtements" },
+    { href: "/Categorie/accessoires", text: "Accessoires" },
+  ];
+  // { href: "/categorie", text: "Categories" },
   element.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -38,10 +43,29 @@ export const Nav = (element) => {
                 (link) => `
                 <li class="nav-item">
                   <a class="nav-link" href="${link.href}">${link.text}</a>
-                </li>`
+                </li>
+                `
               )
               .join("")}
           </ul>
+          
+          <div class="dropdown">
+
+          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Catégorie
+  </button>
+  <ul class="dropdown-menu">
+
+  ${linkssousmenu
+    .map(
+      (link) => `
+                <li class="nav-item">
+                  <a class="nav-link" href="${link.href}">${link.text}</a>
+                </li>
+                `
+    )
+    .join("")}
+</ul>
         </div>
       </div>
     </nav>
