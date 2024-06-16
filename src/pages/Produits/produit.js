@@ -2,23 +2,23 @@ import produits from "../../storage/produits.json";
 import { RoleBadge } from "./Partials/RoleBadge";
 
 /**
- * Page des détails d'un utilisateur
+ * Page des détails d'un produit
  *
  * @param {HTMLElement} element
  * @returns {void}
  */
 export const Produit = (element) => {
-  // on récupère l'identifiant de l'utilisateur depuis l'URL
+  // on récupère l'identifiant de l'produit depuis l'URL
   const url = new URL(window.location.href);
   const produitId = parseInt(url.searchParams.get("id"));
-  // on récupère l'utilisateur correspondant à l'identifiant
+  // on récupère l'produit correspondant à l'identifiant
   const produit = produits.find((produit) => produit.id === produitId);
 
-  // si l'utilisateur n'existe pas, on affiche un message d'erreur
+  // si l'produit n'existe pas, on affiche un message d'erreur
   if (!produit) {
     element.innerHTML = `
-      <h1>Utilisateur non trouvé</h1>
-      <p>L'utilisateur avec l'identifiant ${produitId} n'existe pas.</p>
+      <h1>produit non trouvé</h1>
+      <p>L'produit avec l'identifiant ${produitId} n'existe pas.</p>
       `;
     return;
   }

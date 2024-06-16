@@ -11,8 +11,8 @@ import { accordeontest } from "./pages/accordeon/index";
 const routes = {
   "/": Home,
   "/contact": Contact,
-  "/utilisateur": Produit,
-  "/utilisateurs": Produits,
+  "/produit": Produit,
+  "/produits": Produits,
   "/accordeon": accordeontest,
 };
 

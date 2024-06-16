@@ -1,17 +1,17 @@
 import { CardsList } from "../../components/CardsList";
 import { DataTable } from "../../components/DataTable";
-import users from "../../storage/produits.json";
-import { UserCard } from "./Partials/UserCard";
-import { UserRow } from "./Partials/UserRow";
+import produits from "../../storage/produits.json";
+import { produitCard } from "./Partials/produitCard";
+import { produitRow } from "./Partials/produitRow";
 
 /**
- * Page de la liste des utilisateurs
+ * Page de la liste des produits
  * 2 modes d'affichage : grille et tableau
  *
  * @param {HTMLElement} element
  * @returns {void}
  */
-export const Users = (element) => {
+export const produits = (element) => {
   // on récupère le mode d'affichage depuis l'URL
   const url = new URL(window.location.href);
   const modeFromQueryString = url.searchParams.get("mode");
@@ -19,7 +19,7 @@ export const Users = (element) => {
 
   element.innerHTML = `
     <div class="d-flex justify-content-between">
-      <h1>Utilisateurs</h1>
+      <h1>produits</h1>
       <div>
         <button id="grid-mode-btn" class="btn btn-sm btn-secondary mr-3">
           <i class="ri-layout-grid-line"></i>
@@ -29,20 +29,20 @@ export const Users = (element) => {
         </button>
       </div>
     </div>
-    <div id="users-list"></div>
+    <div id="produits-list"></div>
     `;
 
-  const usersList = element.querySelector("#users-list");
+  const produitsList = element.querySelector("#produits-list");
 
-  // Fonction pour afficher les utilisateurs en fonction du mode d'affichage
+  // Fonction pour afficher les produits en fonction du mode d'affichage
   const render = () => {
     if (mode === "grid") {
-      CardsList(usersList, users, UserCard, ["name", "email"]);
+      CardsList(produitsList, produits, produitCard, ["name", "email"]);
     } else if (mode === "table") {
       DataTable(
-        usersList,
-        users,
-        UserRow,
+        produitsList,
+        produits,
+        produitRow,
         ["name", "email"],
         ["Nom", "Email", "Rôle", "Actions"]
       );

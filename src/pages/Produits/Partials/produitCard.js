@@ -18,17 +18,20 @@ import { RoleBadge } from "./RoleBadge";
 export const produitCard = (produit) => {
   return `
     <div class="col p-2 ">
-      <a class="card produit-link" href="/utilisateur?id=${produit.id}">
+      <a class="card produit-link" href="/produit?id=${produit.id}">
         <div class="card-body">
         
         
-        <figure class="figure"><img src="${produit.image}" class=" img-fluid custom-size " alt="${produit.Nom}"></figure>
+        <figure class="figure"><img src="${
+          produit.image
+        }" class=" img-fluid custom-size " alt="${produit.Nom}"></figure>
 
           <h5 class="card-title">${produit.Nom}</h5>
           <p class="card-text">${produit.description}</p>
           <p class="card-text">${produit.prix}</p>
            <p class="card-text">${produit.categorie}</p>
-      
+           <p class="card-text"> ${RoleBadge(produit.role)}</p>
+          
         </div>
       </a>
     </div>

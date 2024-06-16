@@ -1,11 +1,11 @@
 import { CardsList } from "../../components/CardsList";
 import { DataTable } from "../../components/DataTable";
-import users from "../../storage/produits.json";
+import produits from "../../storage/produits.json";
 import { produitCard } from "./Partials/produitCard";
-import { UserRow } from "./Partials/UserRow";
+import { produitRow } from "./Partials/produitRow";
 
 /**
- * Page de la liste des utilisateurs
+ * Page de la liste des produits
  * 2 modes d'affichage : grille et tableau
  *
  * @param {HTMLElement} element
@@ -29,20 +29,20 @@ export const Produits = (element) => {
         </button>
       </div>
     </div>
-    <div id="users-list"></div>
+    <div id="produits-list"></div>
     `;
 
-  const usersList = element.querySelector("#users-list");
+  const produitsList = element.querySelector("#produits-list");
 
-  // Fonction pour afficher les utilisateurs en fonction du mode d'affichage
+  // Fonction pour afficher les produits en fonction du mode d'affichage
   const render = () => {
     if (mode === "grid") {
-      CardsList(usersList, users, produitCard, ["Nom", "email"]);
+      CardsList(produitsList, produits, produitCard, ["Nom", "email"]);
     } else if (mode === "table") {
       DataTable(
-        usersList,
-        users,
-        UserRow,
+        produitsList,
+        produits,
+        produitRow,
         ["name", "email"],
         ["Nom", "Email", "Rôle", "Actions"]
       );

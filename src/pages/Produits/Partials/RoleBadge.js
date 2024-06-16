@@ -1,13 +1,14 @@
 /**
- * Badge de rôle utilisateur
+ * Badge de rôle produit
  *
  * @param {string} role
  * @returns {string} HTML string
  */
 export const RoleBadge = (role) => {
   const roles = {
-    admin: "text-bg-danger",
-    user: "text-bg-primary",
+    arme: "text-bg-danger",
+    vetement: "text-bg-primary",
+    accessoire: "text-bh-success",
   };
 
   const roleBadge = roles[role] || "text-bg-secondary";
