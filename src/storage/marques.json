@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Marie Dubois",
+    "email": "marie.dubois@example.com",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Jean Martin",
+    "email": "jean.martin@example.com",
+    "role": "utilisateur"
+  },
+  {
+    "id": 3,
+    "name": "Sophie Lambert",
+    "email": "sophie.lambert@example.com",
+    "role": "admin"
+  },
+  {
+    "id": 4,
+    "name": "Khalid Ben Ali",
+    "email": "khalid.benali@example.com",
+    "role": "utilisateur"
+  },
+  {
+    "id": 5,
+    "name": "Laura Dubois",
+    "email": "laura.dubois@example.com",
+    "role": "admin"
+  },
+  {
+    "id": 6,
+    "name": "Luc Lefevre",
+    "email": "luc.lefevre@example.com",
+    "role": "utilisateur"
+  }
+]
