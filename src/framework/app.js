@@ -38,7 +38,7 @@ export const app = (elementId, routes) => {
     page(mainElement);
   };
 
-  // On initialise la page courante en récupérant le pathname de l'URL
+  // On initialise la page courante en récupérant le pathnom de l'URL
   let currentRoute = window.location.pathname;
   changePage(currentRoute);
 

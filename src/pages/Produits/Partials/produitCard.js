@@ -1,9 +1,9 @@
-import { RoleBadge } from "./RoleBadge";
+import { categorieBadge } from "./categorieBadge";
 
 /**
  * @typedef {Object} produit
  * @property {number} id - L'identifiant du produit.
- * @property {string} Nom - Le nom du produit.
+ * @property {string} nom - Le nom du produit.
  * @property {string} description - Description du produit.
  * @property {img} image - L'image du produit.
  * @property {number} prix - Le prix du produit
@@ -24,13 +24,13 @@ export const produitCard = (produit) => {
         
         <figure class="figure"><img src="${
           produit.image
-        }" class=" img-fluid custom-size " alt="${produit.Nom}"></figure>
+        }" class=" img-fluid custom-size " alt="${produit.nom}"></figure>
 
-          <h5 class="card-title">${produit.Nom}</h5>
+          <h5 class="card-title">${produit.nom}</h5>
           <p class="card-text">${produit.description}</p>
           <p class="card-text">${produit.prix}</p>
            <p class="card-text">${produit.categorie}</p>
-           <p class="card-text"> ${RoleBadge(produit.role)}</p>
+           <p class="card-text"> ${categorieBadge(produit.categorie)}</p>
           
         </div>
       </a>

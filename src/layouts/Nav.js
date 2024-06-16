@@ -11,7 +11,7 @@ import { ROUTE_CHANGED_EVENT } from "../framework/app";
  * @returns {void}
  */
 export const Nav = (element) => {
-  const appName = "Une App";
+  const appnom = "Un tour de magie";
 
   /**
    * @type {Link[]}
@@ -27,7 +27,7 @@ export const Nav = (element) => {
   element.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">${appName}</a>
+        <a class="navbar-brand" href="/">${appnom}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -95,11 +95,11 @@ export const Nav = (element) => {
 
     // Si la page courante n'est pas une page de navigation, on affiche uniquement le nom de l'application
     if (!activeLink) {
-      document.title = appName;
+      document.title = appnom;
       return;
     }
 
-    document.title = `${activeLink.textContent} - ${appName}`;
+    document.title = `${activeLink.textContent} - ${appnom}`;
   };
 
   // Initialise la barre de navigation

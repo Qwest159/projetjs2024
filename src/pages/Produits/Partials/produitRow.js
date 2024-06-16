@@ -1,11 +1,10 @@
-import { RoleBadge } from "./RoleBadge";
+import { categorieBadge } from "./categorieBadge";
 
 /**
  * @typedef {Object} produit
  * @property {number} id - L'identifiant de l'produit.
- * @property {string} name - Le nom de l'produit.
- * @property {string} email - L'adresse email de l'produit.
- * @property {string} role - Le rôle de l'produit.
+ * @property {string} nom - Le nom de l'produit.
+ * @property {string} categorie - Le rôle de l'produit.
  */
 
 /**
@@ -17,9 +16,9 @@ import { RoleBadge } from "./RoleBadge";
 export const produitRow = (produit) => {
   return `
     <tr>
-      <td>${produit.Nom}</td>
+      <td>${produit.nom}</td>
       <td>${produit.description}</td>
-      <td>${RoleBadge(produit.categorie)}</td>
+      <td>${categorieBadge(produit.categorie)}</td>
       <td><a class="btn btn-primary btn-sm" href="/produit?id=${
         produit.id
       }"><i class="ri-search-eye-line"></i></a></td>

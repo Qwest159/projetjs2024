@@ -37,14 +37,14 @@ export const produits = (element) => {
   // Fonction pour afficher les produits en fonction du mode d'affichage
   const render = () => {
     if (mode === "grid") {
-      CardsList(produitsList, produits, produitCard, ["name", "email"]);
+      CardsList(produitsList, produits, produitCard, ["nom", "categorie"]);
     } else if (mode === "table") {
       DataTable(
         produitsList,
         produits,
         produitRow,
-        ["name", "email"],
-        ["Nom", "Email", "Rôle", "Actions"]
+        ["nom", "categorie"],
+        ["Nom", "Categorie", "Rôle", "Actions"]
       );
     }
   };

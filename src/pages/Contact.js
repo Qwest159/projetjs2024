@@ -14,8 +14,8 @@ export const Contact = (element) => {
         <h1>Contact</h1>
         <form>
           <div class="form-group mb-2">
-            ${InputLabel("name", "Nom")}
-            ${TextInput("name", "", "text", "Votre nom")}
+            ${InputLabel("nom", "nom")}
+            ${TextInput("nom", "", "text", "Votre nom")}
           </div>
           <div class="form-group mb-2
           ">
@@ -38,7 +38,7 @@ export const Contact = (element) => {
 
     // On affiche les données dans une alerte pour l'exemple
     alert(`
-    Nom : ${data.get("name") ? data.get("name") : "?"}
+    nom : ${data.get("nom") ? data.get("nom") : "?"}
     Email : ${data.get("email") ? data.get("email") : "?"}
     Message : ${data.get("message") ? data.get("message") : "?"}
     `);

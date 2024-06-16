@@ -2,7 +2,7 @@
   {
     "id": 1,
     "image": "/img/imgproduit/arme/baguette_enfant.jpg",
-    "Nom": "Baguette pour Enfants",
+    "nom": "Baguette pour Enfants",
     "description": "Cette baguette est la meilleure au petit-déjeuner",
     "prix": "49,99€",
     "categorie": "arme"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "image": "/img/imgproduit/arme/baguette_adulte.jpg",
-    "Nom": "Baguette pour Adulte",
+    "nom": "Baguette pour Adulte",
     "description": "Cette baguette est assez particulière. <br>Pas besoin de donner plus de détails ...",
     "prix": "39,99€",
     "categorie": "arme"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "image": "/img/imgproduit/arme/cannesenior.jpg",
-    "Nom": "Baguette pour Senior",
+    "nom": "Baguette pour Senior",
     "description": "Belle baguette en bois robuste. <br>Par contre attention à la chute",
     "prix": "29,99€",
     "categorie": "arme"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "image": "/img/imgproduit/arme/baguettenonmagique.jpg",
-    "Nom": "Baguette Magique",
+    "nom": "Baguette Magique",
     "description": "Meilleure vente du mois <br> * Magie non incluse ='(",
     "prix": "49,99€",
     "categorie": "arme"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "image": "/img/imgproduit/vet/baslaid.png",
-    "Nom": "Bas laid",
+    "nom": "Bas laid",
     "description": "Ce bas laid est tellement laid qu'il donne l'impression que les sorcières ont lancé un sort d'effroi sur leur propre monture !",
     "prix": "29,99€",
     "categorie": "vetement"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "image": "/img/imgproduit/vet/carpeinvisible.jpg",
-    "Nom": "Carpe invisibilité",
+    "nom": "Carpe invisibilité",
     "description": "Cette cape légendaire permet juste de rendre la carpe invisible",
     "prix": "9,99€",
     "categorie": "vetement"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "image": "/img/imgproduit/vet/dobbyisfree.jpg",
-    "Nom": "Chaussette Dobby",
+    "nom": "Chaussette Dobby",
     "description": "Des Chaussettes libres pour Dobby. Pour ceux qui soutiennent la cause des elfes de maison.",
     "prix": "19,99€",
     "categorie": "vetement"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "image": "/img/imgproduit/vet/nainbus.png",
-    "Nom": "Nain bus 2000",
+    "nom": "Nain bus 2000",
     "description": "Une autre style de balai, mais cette version est la plus rapide grâce à son conducteur",
     "prix": "39,99€",
     "categorie": "vetement"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "image": "/img/imgproduit/vet/rayonx.PNG",
-    "Nom": "Lunettes rayon X",
+    "nom": "Lunettes rayon X",
     "description": "Attention : Ces lunettes peuvent révéler des secrets...",
     "prix": "49,99€",
     "categorie": "vetement"
@@ -75,7 +75,7 @@
   {
     "id": 10,
     "image": "/img/imgproduit/accessoire/massue.png",
-    "Nom": "Lit masse",
+    "nom": "Lit masse",
     "description": "Avant on l'appelait lit massue, mais elle a perdu ses piques entre-temps<br>PS: pas pratique pour dormir",
     "prix": "39,99€",
     "categorie": "accessoire"
@@ -83,7 +83,7 @@
   {
     "id": 11,
     "image": "/img/imgproduit/accessoire/potionamour.png",
-    "Nom": "Potion d'amour qui fait rire ",
+    "nom": "Potion d'amour qui fait rire ",
     "description": "Une potion d'amour qui, au lieu de rendre les gens romantiques, les fait simplement rire sans fin lorsqu'ils se regardent",
     "prix": "49,99€",
     "categorie": "accessoire"
@@ -91,7 +91,7 @@
   {
     "id": 11,
     "image": "/img/imgproduit/accessoire/livremagie.png",
-    "Nom": "Livre de sorts mélangeur ",
+    "nom": "Livre de sorts mélangeur ",
     "description": "Il mélange les incantations pour créer des effets inattendus.<br>Comme AVADA KEDAVRA...",
     "prix": "29,99€",
     "categorie": "accessoire"
@@ -99,7 +99,7 @@
   {
     "id": 12,
     "image": "/img/imgproduit/accessoire/porto.png",
-    "Nom": "Porto loin",
+    "nom": "Porto loin",
     "description": "Ce fameux porto téléportera quiconque le touchera",
     "prix": "49,99€",
     "categorie": "accessoire"
@@ -107,7 +107,7 @@
   {
     "id": 13,
     "image": "/img/imgproduit/accessoire/vifdor.png",
-    "Nom": "Vif d'or",
+    "nom": "Vif d'or",
     "description": "NE T'EMBALLE PAS.<br> C'est juste un Ferrero Rocher",
     "prix": "39,99€",
     "categorie": "accessoire"
@@ -115,7 +115,7 @@
   {
     "id": 14,
     "image": "/img/imgproduit/accessoire/bonbon.png",
-    "Nom": "Bonbons aux saveurs changeantes",
+    "nom": "Bonbons aux saveurs changeantes",
     "description": " Des bonbons qui changent de saveur à chaque bouchée.<br>Saveur pizza hawaïenne ...",
     "prix": "19,99€",
     "categorie": "accesoire"

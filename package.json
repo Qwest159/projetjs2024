@@ -1,5 +1,5 @@
 {
-  "name": "exemple-structure-vite",
+  "nom": "exemple-structure-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
