@@ -8,7 +8,9 @@ import { Contact } from "./pages/Contact";
 import { Produits } from "./pages/Produits/produits";
 import { Produit } from "./pages/Produits/produit";
 import { Categorie } from "./pages/Categorie/categorie";
-import { accordeontest } from "./pages/accordeon/index";
+import { Panier } from "./pages/Panier";
+
+import { accordeon } from "./pages/accordeon/main";
 
 const routes = {
   "/": Home,
@@ -16,10 +18,11 @@ const routes = {
   // "/categorie": Categorie,
   "/produit": Produit,
   "/produits": Produits,
-  "/accordeon": accordeontest,
+  "/accordeon": accordeon,
+  "/Panier": Panier,
   "/Categorie/armes": Categorie,
   "/Categorie/vetements": Categorie,
-  "/Categorie/accesoires": Categorie,
+  "/Categorie/accessoires": Categorie,
 };
 
 app("#app", routes);

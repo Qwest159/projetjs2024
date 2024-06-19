@@ -1,5 +1,9 @@
 import { Carousel } from "../components/Carousel";
-import images from "../storage/homepageCarousel.json";
+import images from "../storage/produits.json";
+
+import categories from "/src/storage/categories.json";
+
+import { accordeon } from "/src/pages/accordeon/main";
 /**
  * Page d'accueil
  *
@@ -9,6 +13,8 @@ import images from "../storage/homepageCarousel.json";
 export const Home = (element) => {
   element.innerHTML = `
     <h1>Accueil</h1>
-    <p>Bienvenue sur une app !</p>
+    ${Carousel(images)}
+    ${accordeon}
+    
     `;
 };

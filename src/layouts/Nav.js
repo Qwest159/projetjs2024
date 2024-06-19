@@ -21,6 +21,7 @@ export const Nav = (element) => {
     { href: "/contact", text: "Contact" },
     { href: "/produits", text: "Produits" },
     { href: "/accordeon", text: "Accordeon" },
+    { href: "/Panier", text: "Panier" },
   ];
 
   const linkssousmenu = [

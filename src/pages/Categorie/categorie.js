@@ -1,12 +1,8 @@
 import { CardsList } from "../../components/CardsList";
-
 import produits from "../../storage/produits.json";
 import { produitCard } from "./Partials/produitCard";
 
 export const Categorie = (element) => {
-  // on récupère le mode d'affichage depuis l'URL
-  const url = new URL(window.location.href);
-
   element.innerHTML = `
       <div class="d-flex justify-content-between">
         <h1>Produits</h1>
@@ -26,7 +22,7 @@ export const Categorie = (element) => {
       (element) => element.categorie === "vetement"
     );
     CardsList(produitsList, vetements, produitCard, ["nom"]);
-  } else if (chemin === "/Categorie/accessoire") {
+  } else if (chemin === "/Categorie/accessoires") {
     const accessoires = produits.filter(
       (element) => element.categorie === "accessoire"
     );

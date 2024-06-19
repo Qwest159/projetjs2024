@@ -5,9 +5,6 @@ import { produitCard } from "./Partials/produitCard";
 import { produitRow } from "./Partials/produitRow";
 
 /**
- * Page de la liste des produits
- * 2 modes d'affichage : grille et tableau
- *
  * @param {HTMLElement} element
  * @returns {void}
  */
