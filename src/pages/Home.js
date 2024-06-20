@@ -14,7 +14,7 @@ export const Home = (element) => {
   element.innerHTML = `
     <h1>Accueil</h1>
     ${Carousel(images)}
-    ${accordeon}
+    <!-- ${accordeon(categories)} -->
     
     `;
 };

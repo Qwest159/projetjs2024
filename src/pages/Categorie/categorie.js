@@ -11,7 +11,6 @@ export const Categorie = (element) => {
       `;
 
   const produitsList = element.querySelector("#produits-list");
-
   const chemin = window.location.pathname;
 
   if (chemin === "/Categorie/armes") {

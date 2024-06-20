@@ -10,15 +10,12 @@ import { Produit } from "./pages/Produits/produit";
 import { Categorie } from "./pages/Categorie/categorie";
 import { Panier } from "./pages/Panier";
 
-import { accordeon } from "./pages/accordeon/main";
-
 const routes = {
   "/": Home,
   "/contact": Contact,
   // "/categorie": Categorie,
   "/produit": Produit,
   "/produits": Produits,
-  "/accordeon": accordeon,
   "/Panier": Panier,
   "/Categorie/armes": Categorie,
   "/Categorie/vetements": Categorie,

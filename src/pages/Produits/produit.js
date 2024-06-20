@@ -34,22 +34,17 @@ export const Produit = (element) => {
 <p class="card-text">${produit.description}</p>
 <p class="card-text">${produit.prix}</p>
  <p class="card-text">${categorieBadge(produit.categorie)}</p>
- ${button()}
+ <div class="mt-3">
+    <label for="valeur">Entrez le chiffre que vous souhaitez:</label><br>
+      <input type="number" id="valeur" value="1">
+      
+      <button id="envoier">Envoyer</button>
+    </div>
+    <p id="result"></p>
     `;
-
-  if (!window.location.hash) {
-    // Ajoutez un hash à l'URL pour éviter un rafraîchissement en boucle
-    window.location.hash = "loaded";
-    // Rafraîchir la page
-    window.location.reload();
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  const envoiers = document.getElementById("envoier");
-  console.log(envoiers);
+  let envoier = document.querySelector("#envoier");
   // Ajouter un événement de clic au bouton "Envoyer"
-  envoiers.addEventListener("click", () => {
+  envoier.addEventListener("click", () => {
     const valeur = document.querySelector("#valeur");
     // Récupérer la valeur entrée dans l'input
     const quantiter = valeur.value;
@@ -64,12 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Veuillez entrer une valeur avant d'envoyer.";
     }
   });
-});
-// let json = JSON.stringify(produit);
-// console.log(json);
-
-// let test = JSON.parse(json);
-// console.log(test);
+};
 
 function sauvPanier(panier) {
   localStorage.setItem("panier", JSON.stringify(panier));
@@ -84,46 +74,38 @@ function recupPanier() {
   }
 }
 
-function ajouterPanier(produit, quantiters) {
-  let quantiter = parseInt(quantiters);
+function ajouterPanier(produit, quantités) {
+  let quantiter = parseInt(quantités);
   let panier = recupPanier();
+
   const url = new URL(window.location.href);
   const produitId = parseInt(url.searchParams.get("id"));
-  //produitpsuh = le produit en question
   let produitpush = produit.find((p) => p.id === produitId);
-
-  let nouveauProduit = {
-    id: produitpush.id,
-    nom: produitpush.nom,
-    quantité: (produitpush.quantité = quantiter),
-  };
 
   let trouverproduitpanier = panier.find((p) => p.id === produitId);
 
+  // console.log(trouverproduitpanier);
+
+  // console.log(panier);
   if (trouverproduitpanier != undefined) {
     trouverproduitpanier.quantité += quantiter;
-    if (trouverproduitpanier.quantité < 0) {
-      trouverproduitpanier.quantité = 0;
+    if (trouverproduitpanier.quantité <= 0) {
+      // trouver indice du tableau, ensuite retirer du tableau, ensuite push le tableau+
+      for (let i = 0; i < panier.length; i++) {
+        if (trouverproduitpanier.id === panier[i].id) {
+          panier.splice(i, 1);
+        }
+      }
     }
   } else {
-    console.log("nope");
-    nouveauProduit = {
+    let nouveauProduit = {
       id: produitpush.id,
       nom: produitpush.nom,
-      quantité: quantiter,
+      quantité: (produitpush.quantité = quantiter),
+      prix: produitpush.prix,
     };
-
     panier.push(nouveauProduit);
-    // console.log(nouveauProduit.quantité);
   }
-
-  console.log(panier[0]);
-  sauvPanier(panier);
-}
-
-function retirerpanier(produit) {
-  let panier = recupPanier();
-  panier = panier.filter((p) => p.id != produit.id);
   sauvPanier(panier);
 }
 
@@ -139,15 +121,6 @@ function changementquantiter(produit, quantiter) {
       sauvPanier(panier);
     }
   }
-}
-
-function recuperer_prix_produit() {
-  let panier = recupPanier();
-  let chiffre_produit = 0;
-  for (let produit of panier) {
-    chiffre_produit += produit.quantiter;
-  }
-  return chiffre_produit;
 }
 
 function recuperer_prixtotal_produit() {
