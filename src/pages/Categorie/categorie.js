@@ -1,6 +1,6 @@
 import { CardsList } from "../../components/CardsList";
 import produits from "../../storage/produits.json";
-import { produitCard } from "./Partials/produitCard";
+import { produitCard } from "../Produits/Partials/produitCard";
 
 export const Categorie = (element) => {
   element.innerHTML = `

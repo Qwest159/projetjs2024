@@ -12,3 +12,32 @@ a {
 .carousel-inner img {
   height: 30em !important;
 }
+h3 {
+  text-align: center !important;
+}
+#bascarousel div#lien {
+  background-color: black !important;
+  color: white !important ;
+}
+
+#bascarousel a {
+  text-align: center;
+  position: relative !important;
+  top: 1.5em !important;
+  border-radius: 1em !important;
+  padding: 0.25em 0 !important;
+  display: block !important;
+}
+#bascarousel a:hover {
+  color: aqua !important;
+}
+.active {
+  color: red !important;
+  font-weight: 500;
+}
+.descriptions {
+  height: 6em !important;
+}
+#lignetotal {
+  border: solid 2px;
+}

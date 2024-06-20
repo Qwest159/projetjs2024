@@ -1,17 +1,20 @@
 [
   {
     "id": 1,
-    "nom": "Arme",
-    "description": "Les armes magiques sont bien plus que des instruments de combat. Elles sont des reliques chargées d'énergie ancienne, forgées dans le feu de la créativité des grands enchanteurs. Chaque lame, chaque bâton, chaque arc est imprégné de sortilèges millénaires, prêt à déchaîner des pouvoirs qui dépassent l'imagination humaine. Une arme magique est non seulement un outil de protection, mais aussi une extension de la volonté de son porteur, capable de changer le cours des batailles et de défier les forces les plus sombres."
+    "nom": "Armes",
+    "description": "Les armes magiques sont bien plus que des instruments de combat. Elles sont des reliques chargées d'énergie ancienne, forgées dans le feu de la créativité des grands enchanteurs. Chaque lame, chaque bâton, chaque arc est imprégné de sortilèges millénaires, prêt à déchaîner des pouvoirs qui dépassent l'imagination humaine. Une arme magique est non seulement un outil de protection, mais aussi une extension de la volonté de son porteur, capable de changer le cours des batailles et de défier les forces les plus sombres.",
+    "chemin": "/Categorie/armes"
   },
   {
     "id": 2,
-    "nom": "Vetement",
-    "description": "Les vêtements transcendent la mode ordinaire pour devenir des symboles de pouvoir et de mystère. Brodés avec des fils d'or enchantés et teints dans des couleurs éthérées, ces vêtements révèlent des motifs complexes qui racontent des histoires anciennes. Chaque pièce est conçue pour non seulement embellir celui qui la porte, mais aussi pour renforcer son aura magique. Un vêtement magique n'est pas seulement une parure, mais un lien avec le cosmos, capable de conférer à son porteur des capacités surnaturelles et une présence éclatante."
+    "nom": "Vêtements",
+    "description": "Les vêtements transcendent la mode ordinaire pour devenir des symboles de pouvoir et de mystère. Brodés avec des fils d'or enchantés et teints dans des couleurs éthérées, ces vêtements révèlent des motifs complexes qui racontent des histoires anciennes. Chaque pièce est conçue pour non seulement embellir celui qui la porte, mais aussi pour renforcer son aura magique. Un vêtement magique n'est pas seulement une parure, mais un lien avec le cosmos, capable de conférer à son porteur des capacités surnaturelles et une présence éclatante.",
+    "chemin": "/Categorie/vetements"
   },
   {
     "id": 3,
-    "nom": "Accessoire",
-    "description": "Les accessoires sont des joyaux de l'artisanat enchanté, des objets aussi précieux que mystérieux. Que ce soit une amulette gravée de runes anciennes, une potion scintillante ou un bijou incrusté de gemmes aux pouvoirs cachés, chaque accessoire magique est une passerelle vers un monde de possibilités infinies. Portés avec intention, ces artefacts peuvent amplifier la puissance magique de leur utilisateur, offrir protection contre les forces obscures ou même déverrouiller des portails vers des dimensions inconnues."
+    "nom": "Accessoires",
+    "description": "Les accessoires sont des joyaux de l'artisanat enchanté, des objets aussi précieux que mystérieux. Que ce soit une amulette gravée de runes anciennes, une potion scintillante ou un bijou incrusté de gemmes aux pouvoirs cachés, chaque accessoire magique est une passerelle vers un monde de possibilités infinies. Portés avec intention, ces artefacts peuvent amplifier la puissance magique de leur utilisateur, offrir protection contre les forces obscures ou même déverrouiller des portails vers des dimensions inconnues.",
+    "chemin": "/Categorie/accessoires"
   }
 ]

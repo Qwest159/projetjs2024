@@ -27,7 +27,7 @@ export const produitCard = (produit) => {
         }" class=" img-fluid custom-size " alt="${produit.nom}"></figure>
 
           <h5 class="card-title">${produit.nom}</h5>
-          <p class="card-text">${produit.description}</p>
+          <p class="card-text descriptions">${produit.description}</p>
           <p class="card-text">${produit.prix}</p>
            <p class="card-text"> ${categorieBadge(produit.categorie)}</p>
           
