@@ -38,6 +38,15 @@ h3 {
 .descriptions {
   height: 6em !important;
 }
-#lignetotal {
-  border: solid 2px;
+tbody tr:hover {
+  border: solid 5px red;
+}
+td,
+thead {
+  border: solid 0.1px;
+}
+.sticky {
+  position: sticky !important;
+  top: 0;
+  border: solid 3px !important;
 }

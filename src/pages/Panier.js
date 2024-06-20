@@ -16,14 +16,14 @@ function sauvPanier(panier) {
 export let Panier = (element) => {
   // on définit une constante pour l'événement de mise à jour du compteur
   element.innerHTML = `
-
+<button id="supprimertous">SUPPRIMER</button>
 <h1>Panier</h1>
 
 
 <div class="container text-center">
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr class="fs-5">
+    <table class="table  table-striped">
+        <thead class="">
+            <tr class="fs-5 sticky">
                 <th>Quantité</th>
                 <th>Nom</th>
                 <th>Prix Unitaire</th>
@@ -36,7 +36,7 @@ export let Panier = (element) => {
            (produit) => `
         <tbody>
             <tr class="fs-5">
-                <td>${produit.quantité}</td>
+                <td >${produit.quantité}</td>
                 <td>${produit.nom}</td>
                 <td>${produit.prix}</td>
                 <td>${recuperer_prix_produit(produit)} €</td>
@@ -46,19 +46,27 @@ export let Panier = (element) => {
                     }" type="button" class="btn btn-danger fw-bold supprimer">X</button>
                 </td>
             </tr>
+             </tbody>
       `
          )
          .join("")}  
+         <thead>
          <tr id="lignetotal">
             <th class="fs-4" colspan="3">Prix Totaux</th>
             <td class="fs-3 fw-bold" colspan="2">${recuperer_prixtotal_produit()} €</td>
         </tr>
-        </tbody>
+        </thead>
          </table>
          </div>
      `;
-  let boutons = document.querySelectorAll(".supprimer");
 
+  let boutonsupptouts = document.querySelector("#supprimertous");
+  boutonsupptouts.addEventListener("click", () => {
+    localStorage.removeItem("panier");
+    return Panier(element);
+  });
+
+  let boutons = document.querySelectorAll(".supprimer");
   boutons.forEach((button) => {
     button.addEventListener("click", () => {
       let id = button.getAttribute("id");
@@ -83,7 +91,6 @@ function recuperer_prixtotal_produit() {
 
   for (let i = 0; i < panier.length; i++) {
     let chifretotatlparproduit = recuperer_prix_produit(panier[i]);
-    console.log(chifretotatlparproduit);
     total += parseFloat(chifretotatlparproduit);
   }
   return total.toFixed(2);
