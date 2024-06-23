@@ -2,6 +2,7 @@ import { InputLabel } from "../components/InputLabel";
 import { PrimaryButton } from "../components/PrimaryButton";
 import { TextInput } from "../components/TextInput";
 import { TextareaInput } from "../components/TextareaInput";
+import { recuperer_quantitetotal_produit } from "../components/Panierquantite";
 
 /**
  * Page de contact
@@ -11,6 +12,10 @@ import { TextareaInput } from "../components/TextareaInput";
  */
 export const Contact = (element) => {
   element.innerHTML = `
+<p class="panier">
+<i class="fa-solid fa-basket-shopping"></i>  
+<span>${recuperer_quantitetotal_produit()}</span>
+</p>
         <h1>Contact</h1>
         <form>
           <div class="form-group mb-2">

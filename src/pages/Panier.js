@@ -1,3 +1,5 @@
+import { recuperer_quantitetotal_produit } from "../components/Panierquantite";
+
 function recupPanier() {
   let panier = localStorage.getItem("panier");
 
@@ -17,6 +19,12 @@ export let Panier = (element) => {
   // on définit une constante pour l'événement de mise à jour du compteur
   element.innerHTML = `
 <button id="supprimertous">SUPPRIMER</button>
+
+<p class="panier">
+<i class="fa-solid fa-basket-shopping"></i>  
+<span>${recuperer_quantitetotal_produit()}</span>
+</p>
+
 <h1>Panier</h1>
 
 
@@ -52,7 +60,7 @@ export let Panier = (element) => {
          .join("")}  
          <thead>
          <tr id="lignetotal">
-            <th class="fs-4" colspan="3">Prix Totaux</th>
+            <th class="fs-4" colspan="3">Prix Total des articles</th>
             <td class="fs-3 fw-bold" colspan="2">${recuperer_prixtotal_produit()} €</td>
         </tr>
         </thead>
@@ -72,9 +80,19 @@ export let Panier = (element) => {
       let id = button.getAttribute("id");
       supprimerdonnee(recupPanier(), id);
       return Panier(element);
+      return panierquantite();
     });
   });
 };
+
+let boutons = document.querySelectorAll(".supprimer");
+boutons.forEach((button) => {
+  button.addEventListener("click", () => {
+    let id = button.getAttribute("id");
+    supprimerdonnee(recupPanier(), id);
+    return nav(element);
+  });
+});
 
 function recuperer_prix_produit(produit) {
   let chiffre_produit = 0;

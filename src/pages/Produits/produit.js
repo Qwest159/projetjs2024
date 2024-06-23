@@ -2,6 +2,7 @@
 import produits from "../../storage/produits.json";
 import { button } from "../../components/button";
 import { categorieBadge } from "./Partials/categorieBadge";
+import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 
 /**
  * Page des détails d'un produit
@@ -26,6 +27,10 @@ export const Produit = (element) => {
   }
 
   element.innerHTML = `
+<p class="panier">
+<i class="fa-solid fa-basket-shopping"></i>  
+<span>${recuperer_quantitetotal_produit()}</span>
+</p>
     <img src="${produit.image}" class="img-thumbnail  img-fluid" alt="${
     produit.nom
   }">
@@ -58,6 +63,7 @@ export const Produit = (element) => {
       document.querySelector("#result").textContent =
         "Veuillez entrer une valeur avant d'envoyer.";
     }
+    return Produit(element);
   });
 };
 
@@ -97,14 +103,16 @@ function ajouterPanier(produit, quantités) {
         }
       }
     }
-  } else {
-    let nouveauProduit = {
-      id: produitpush.id,
-      nom: produitpush.nom,
-      quantité: (produitpush.quantité = quantiter),
-      prix: produitpush.prix,
-    };
-    panier.push(nouveauProduit);
+  } else if (trouverproduitpanier == undefined) {
+    if (quantiter > 0) {
+      let nouveauProduit = {
+        id: produitpush.id,
+        nom: produitpush.nom,
+        quantité: (produitpush.quantité = quantiter),
+        prix: produitpush.prix,
+      };
+      panier.push(nouveauProduit);
+    }
   }
   sauvPanier(panier);
 }

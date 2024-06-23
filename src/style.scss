@@ -50,3 +50,20 @@ thead {
   top: 0;
   border: solid 3px !important;
 }
+.panier {
+  position: absolute;
+  top: 0.3em;
+  right: 3em;
+  font-size: 1.6em;
+}
+.panier span {
+  background-color: red !important;
+  border-radius: 1em !important;
+  padding: 1px 7px;
+  font-size: 0.65em !important;
+  color: white !important;
+  font-weight: bolder;
+  position: relative;
+  right: 0.5em;
+  top: -0.9em;
+}

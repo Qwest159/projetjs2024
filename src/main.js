@@ -1,4 +1,5 @@
 import "./style.scss";
+
 import "remixicon/fonts/remixicon.css";
 import { app } from "./framework/app";
 

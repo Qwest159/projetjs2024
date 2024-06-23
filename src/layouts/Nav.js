@@ -11,8 +11,8 @@ import { ROUTE_CHANGED_EVENT } from "../framework/app";
  * @returns {void}
  */
 export const Nav = (element) => {
-  const appnom = "Un tour de magie";
-
+  let appnom = "Un tour de magie";
+  // appnom += panierquantite();
   /**
    * @type {Link[]}
    */
@@ -21,6 +21,7 @@ export const Nav = (element) => {
     { href: "/contact", text: "Contact" },
     { href: "/produits", text: "Produits" },
     { href: "/Panier", text: "Panier" },
+    // { href: "/Panier", text: panierquantite() },
   ];
 
   const linkssousmenu = [

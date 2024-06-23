@@ -7,7 +7,7 @@
 export const categorieBadge = (categorie) => {
   const categories = {
     arme: "text-bg-danger",
-    vetement: "text-bg-primary",
+    vêtement: "text-bg-primary",
     accessoire: "text-bg-success",
   };
 

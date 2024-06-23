@@ -20,8 +20,9 @@ export const app = (elementId, routes) => {
   const mainElement = document.querySelector("main");
 
   // On injecte la barre de navigation dans le header
-  Nav(headerElement);
 
+  Nav(headerElement);
+  // panierquantite(headerElement);
   /**
    * Fonction qui remplace le contenu de la page lorsqu'on change de route
    * @returns {void}

@@ -3,6 +3,7 @@ import { DataTable } from "../../components/DataTable";
 import produits from "../../storage/produits.json";
 import { produitCard } from "./Partials/produitCard";
 import { produitRow } from "./Partials/produitRow";
+import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 
 /**
  * @param {HTMLElement} element
@@ -15,6 +16,10 @@ export const Produits = (element) => {
   let mode = modeFromQueryString || "grid";
 
   element.innerHTML = `
+ <p class="panier">
+<i class="fa-solid fa-basket-shopping"></i>  
+<span>${recuperer_quantitetotal_produit()}</span>
+</p>
     <div class="d-flex justify-content-between">
       <h1>Produits</h1>
       <div>

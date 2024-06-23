@@ -3,7 +3,7 @@
     "id": 1,
     "image": "/img/imgproduit/arme/baguette_enfant.jpg",
     "nom": "Baguette pour Enfants",
-    "description": "Cette baguette est la meilleure au petit-déjeuner",
+    "description": "Cette baguette est la meilleure au petit-déjeuner.",
     "prix": "49,99€",
     "categorie": "arme"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "image": "/img/imgproduit/arme/cannesenior.jpg",
     "nom": "Baguette pour Senior",
-    "description": "Belle baguette en bois robuste. <br>Par contre attention à la chute",
+    "description": "Belle baguette en bois robuste. <br>Par contre, attention à la chute.",
     "prix": "29,99€",
     "categorie": "arme"
   },
@@ -37,15 +37,15 @@
     "nom": "Bas laid",
     "description": "Ce bas laid est tellement laid qu'il donne l'impression que les sorcières ont lancé un sort d'effroi sur leur propre monture !",
     "prix": "29,99€",
-    "categorie": "vetement"
+    "categorie": "vêtement"
   },
   {
     "id": 6,
     "image": "/img/imgproduit/vet/carpeinvisible.jpg",
     "nom": "Carpe invisibilité",
-    "description": "Cette cape légendaire permet juste de rendre la carpe invisible",
+    "description": "Cette cape légendaire permet juste de rendre la carpe invisible.",
     "prix": "9,99€",
-    "categorie": "vetement"
+    "categorie": "vêtement"
   },
   {
     "id": 7,
@@ -53,15 +53,15 @@
     "nom": "Chaussette Dobby",
     "description": "Des Chaussettes libres pour Dobby. Pour ceux qui soutiennent la cause des elfes de maison.",
     "prix": "19,99€",
-    "categorie": "vetement"
+    "categorie": "vêtement"
   },
   {
     "id": 8,
     "image": "/img/imgproduit/vet/nainbus.png",
     "nom": "Nain bus 2000",
-    "description": "Une autre style de balai, mais cette version est la plus rapide grâce à son conducteur",
+    "description": "Une autre style de balai, mais cette version est la plus rapide grâce à son conducteur.",
     "prix": "39,99€",
-    "categorie": "vetement"
+    "categorie": "vêtement"
   },
   {
     "id": 9,
@@ -69,14 +69,14 @@
     "nom": "Lunettes rayon X",
     "description": "Attention : Ces lunettes peuvent révéler des secrets...",
     "prix": "49,99€",
-    "categorie": "vetement"
+    "categorie": "vêtement"
   },
 
   {
     "id": 10,
     "image": "/img/imgproduit/accessoire/massue.png",
     "nom": "Lit masse",
-    "description": "Avant on l'appelait lit massue, mais elle a perdu ses piques entre-temps<br>PS: pas pratique pour dormir",
+    "description": "Avant on l'appelait lit massue, mais elle a perdu ses piques entre-temps<br>PS: pas pratique pour dormir.",
     "prix": "39,99€",
     "categorie": "accessoire"
   },
@@ -84,7 +84,7 @@
     "id": 11,
     "image": "/img/imgproduit/accessoire/potionamour.png",
     "nom": "Potion d'amour qui fait rire ",
-    "description": "Une potion d'amour qui, au lieu de rendre les gens romantiques, les fait simplement rire sans fin lorsqu'ils se regardent",
+    "description": "Une potion d'amour qui, au lieu de rendre les gens romantiques, les fait simplement rire sans fin lorsqu'ils se regardent.",
     "prix": "49,99€",
     "categorie": "accessoire"
   },
@@ -100,7 +100,7 @@
     "id": 12,
     "image": "/img/imgproduit/accessoire/porto.png",
     "nom": "Porto loin",
-    "description": "Ce fameux porto téléportera quiconque le touchera",
+    "description": "Ce fameux porto téléportera quiconque le touchera.",
     "prix": "49,99€",
     "categorie": "accessoire"
   },
@@ -108,7 +108,7 @@
     "id": 13,
     "image": "/img/imgproduit/accessoire/vifdor.png",
     "nom": "Vif d'or",
-    "description": "NE T'EMBALLE PAS.<br> C'est juste un Ferrero Rocher",
+    "description": "NE T'EMBALLE PAS.<br> C'est juste un Ferrero Rocher.",
     "prix": "39,99€",
     "categorie": "accessoire"
   },
