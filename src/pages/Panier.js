@@ -1,4 +1,7 @@
 import { recuperer_quantitetotal_produit } from "../components/Panierquantite";
+import { button } from "../components/button";
+import produits from "../storage/produits.json";
+import "../pages/Produits/produit";
 
 function recupPanier() {
   let panier = localStorage.getItem("panier");
@@ -44,7 +47,19 @@ export let Panier = (element) => {
            (produit) => `
         <tbody>
             <tr class="fs-5">
-                <td >${produit.quantité}</td>
+                <td >${produit.quantité}
+
+   <div class="mt-3">
+
+    <button class="btn btn-danger" id="moins" type="button" class="btn">-</button>
+      <input id="valeur"  type="number" value="1">
+      <button class="btn btn-success" id="plus" type="button" class="btn">+</button><br>
+
+      <button class="${produit.id}" id="envoier">Envoyer</button>
+    </div>
+
+                </td>
+
                 <td>${produit.nom}</td>
                 <td>${produit.prix}</td>
                 <td>${recuperer_prix_produit(produit)} €</td>
@@ -68,6 +83,36 @@ export let Panier = (element) => {
          </div>
      `;
 
+  let moins = document.querySelectorAll("#moins");
+  let plus = document.querySelectorAll("#plus");
+
+  moins.forEach((buttonsmoins, index) => {
+    buttonsmoins.addEventListener("click", () => {
+      let valeur = document.querySelectorAll("#valeur")[index];
+      console.log(valeur);
+      valeur.value = parseFloat(valeur.value) - 1;
+    });
+  });
+
+  plus.forEach((bouttonsplus, index) => {
+    bouttonsplus.addEventListener("click", () => {
+      let valeur = document.querySelectorAll("#valeur")[index];
+      valeur.value = parseFloat(valeur.value) + 1;
+    });
+  });
+
+  let boutonsvaleur = document.querySelectorAll("#envoier");
+  boutonsvaleur.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      console.log(button);
+      let id = button.getAttribute("class");
+      let valeur = document.querySelectorAll("#valeur")[index];
+      console.log(id);
+      ajouterPanier(id, valeur.value);
+      return Panier(element);
+    });
+  });
+
   let boutonsupptouts = document.querySelector("#supprimertous");
   boutonsupptouts.addEventListener("click", () => {
     localStorage.removeItem("panier");
@@ -80,19 +125,9 @@ export let Panier = (element) => {
       let id = button.getAttribute("id");
       supprimerdonnee(recupPanier(), id);
       return Panier(element);
-      return panierquantite();
     });
   });
 };
-
-let boutons = document.querySelectorAll(".supprimer");
-boutons.forEach((button) => {
-  button.addEventListener("click", () => {
-    let id = button.getAttribute("id");
-    supprimerdonnee(recupPanier(), id);
-    return nav(element);
-  });
-});
 
 function recuperer_prix_produit(produit) {
   let chiffre_produit = 0;
@@ -122,4 +157,28 @@ function supprimerdonnee(panier, ID) {
     }
   }
   return sauvPanier(panier);
+}
+
+function ajouterPanier(id, quantités) {
+  let quantiter = parseInt(quantités);
+  let panier = recupPanier();
+
+  let trouverproduitpanier = panier.find((p) => p.id == id);
+
+  console.log(panier);
+  console.log(trouverproduitpanier);
+
+  console.log(panier);
+  if (trouverproduitpanier != undefined) {
+    trouverproduitpanier.quantité += quantiter;
+    if (trouverproduitpanier.quantité <= 0) {
+      // trouver indice du tableau, ensuite retirer du tableau, ensuite push le tableau+
+      for (let i = 0; i < panier.length; i++) {
+        if (trouverproduitpanier.id === panier[i].id) {
+          panier.splice(i, 1);
+        }
+      }
+    }
+  }
+  sauvPanier(panier);
 }

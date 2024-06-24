@@ -40,28 +40,27 @@ export const Produit = (element) => {
 <p class="card-text">${produit.prix}</p>
  <p class="card-text">${categorieBadge(produit.categorie)}</p>
  <div class="mt-3">
-    <label for="valeur">Entrez le chiffre que vous souhaitez:</label><br>
-      <input type="number" id="valeur" value="1">
-      
-      <button id="envoier">Envoyer</button>
-    </div>
-    <p id="result"></p>
+ <label for="valeur">Nombre d'exemplaires que vous souhaitez:</label><br>
+    ${button()}
     `;
+
+  let moins = document.querySelector("#moins");
+  let valeur = document.querySelector("#valeur");
+  let plus = document.querySelector("#plus");
+
+  moins.addEventListener("click", () => {
+    valeur.value = parseFloat(valeur.value) - 1;
+  });
+  plus.addEventListener("click", () => {
+    valeur.value = parseFloat(valeur.value) + 1;
+  });
+
   let envoier = document.querySelector("#envoier");
-  // Ajouter un événement de clic au bouton "Envoyer"
   envoier.addEventListener("click", () => {
     const valeur = document.querySelector("#valeur");
-    // Récupérer la valeur entrée dans l'input
     const quantiter = valeur.value;
-
     if (quantiter) {
-      document.querySelector("#result").textContent = JSON.stringify(
-        ajouterPanier(produits, quantiter)
-      );
-    } else {
-      // Afficher un message si aucune valeur n'a été entrée
-      document.querySelector("#result").textContent =
-        "Veuillez entrer une valeur avant d'envoyer.";
+      ajouterPanier(produits, quantiter);
     }
     return Produit(element);
   });
@@ -116,28 +115,3 @@ function ajouterPanier(produit, quantités) {
   }
   sauvPanier(panier);
 }
-
-function changementquantiter(produit, quantiter) {
-  let panier = recupPanier();
-
-  let trouverproduit = panier.find((p) => p.id == produit.id);
-  if (trouverproduit != undefined) {
-    trouverproduit.quantiter += quantiter;
-    if (trouverproduit.quantiter <= 0) {
-      retirerpanier(produit);
-    } else {
-      sauvPanier(panier);
-    }
-  }
-}
-
-function recuperer_prixtotal_produit() {
-  let panier = recupPanier();
-  let total = 0;
-  for (let produit of panier) {
-    total += produit.quantiter * produit.prix;
-  }
-  return total;
-}
-
-// Sélectionner l'élément input et le bouton
