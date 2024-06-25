@@ -91,13 +91,9 @@ function ajouterPanier(produit, quantités) {
 
   let trouverproduitpanier = panier.find((p) => p.id === produitId);
 
-  // console.log(trouverproduitpanier);
-
-  // console.log(panier);
   if (trouverproduitpanier != undefined) {
     trouverproduitpanier.quantité += quantiter;
     if (trouverproduitpanier.quantité <= 0) {
-      // trouver indice du tableau, ensuite retirer du tableau, ensuite push le tableau+
       for (let i = 0; i < panier.length; i++) {
         if (trouverproduitpanier.id === panier[i].id) {
           panier.splice(i, 1);

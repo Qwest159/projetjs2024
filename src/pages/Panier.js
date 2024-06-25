@@ -54,7 +54,7 @@ export let Panier = (element) => {
 
    <div class="mt-3">
 
-    <button class="btn btn-danger" id="moins" type="button" >-</button>
+    <button class="btn btn-danger fw-bolder" id="moins" type="button" >-</button>
       <input id="valeur"  type="number" value="1">
       <button class="btn btn-success" id="plus" type="button" >+</button><br>
 
@@ -62,7 +62,6 @@ export let Panier = (element) => {
     </div>
 
                 </td>
-
                 <td>${produit.nom}</td>
                 <td>${produit.prix}</td>
                 <td>${recuperer_prix_produit(produit)} €</td>

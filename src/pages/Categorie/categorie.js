@@ -1,8 +1,10 @@
 import { CardsList } from "../../components/CardsList";
 import produits from "../../storage/produits.json";
+import categories from "../../storage/categories.json";
 import { produitCard } from "../Produits/Partials/produitCard";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 export const Categorie = (element) => {
+  const chemin = window.location.pathname;
   element.innerHTML = `
 <p class="panier">
 <a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
@@ -10,13 +12,24 @@ export const Categorie = (element) => {
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
       <div class="d-flex justify-content-between">
-        <h1>Produits</h1>
+
+      <div class="d-flex justify-content-between">
+      ${categories
+        .map(
+          (categorie) => `
+  ${chemin === categorie.chemin ? `<h1> Marque: ${categorie.nom}</h1>` : ""}
+        `
+        )
+        .join("")}
+      </div>
+
+
+
       </div>
       <div id="produits-list"></div>
       `;
 
   const produitsList = element.querySelector("#produits-list");
-  const chemin = window.location.pathname;
 
   if (chemin === "/Categorie/armes") {
     const armes = produits.filter((element) => element.categorie === "arme");

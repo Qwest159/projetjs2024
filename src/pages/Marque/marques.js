@@ -1,8 +1,10 @@
 import { CardsList } from "../../components/CardsList";
 import produits from "../../storage/produits.json";
+import marques from "../../storage/marques.json";
 import { produitCard } from "../Produits/Partials/produitCard";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 export const Marque = (element) => {
+  const chemin = window.location.pathname;
   element.innerHTML = `
 <p class="panier">
 <a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
@@ -10,14 +12,19 @@ export const Marque = (element) => {
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
       <div class="d-flex justify-content-between">
-        <h1>Marque</h1>
+      ${marques
+        .map(
+          (marque) => `
+  ${chemin === marque.chemin ? `<h1> Marque: ${marque.nom}</h1>` : ""}
+        `
+        )
+        .join("")}
       </div>
       <div id="produits-list"></div>
       `;
 
   const produitsList = element.querySelector("#produits-list");
-  const chemin = window.location.pathname;
-  console.log(chemin);
+
   if (chemin === "/Marque/bouffondors") {
     const Bouffondors = produits.filter(
       (element) => element.marque === "Bouffondor"

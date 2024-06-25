@@ -13,6 +13,7 @@ export const Layout = () => {
       </main>
       <footer class="text-center mt-auto">
         <p>&copy; ${year} - Tous droits réservés</p>
+        <p>faux site realisé pour le cours</p>
       </footer>
     </div>
     `;
