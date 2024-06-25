@@ -6,6 +6,10 @@ img {
   width: 25em !important;
   height: 15em !important;
 }
+nav a:hover {
+  border-bottom: 3px solid red !important
+  ;
+}
 a {
   text-decoration: none;
 }

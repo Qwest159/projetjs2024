@@ -2,10 +2,9 @@ import { recuperer_quantitetotal_produit } from "../components/Panierquantite";
 import { button } from "../components/button";
 import produits from "../storage/produits.json";
 import "../pages/Produits/produit";
-
+import { modal } from "../components/modal";
 function recupPanier() {
   let panier = localStorage.getItem("panier");
-
   let paniers = JSON.parse(panier);
   if (panier == null) {
     return [];
@@ -21,11 +20,15 @@ function sauvPanier(panier) {
 export let Panier = (element) => {
   // on définit une constante pour l'événement de mise à jour du compteur
   element.innerHTML = `
-<button id="supprimertous">SUPPRIMER</button>
+
+<!-- Button trigger modal -->
+
+
 
 <p class="panier">
-<i class="fa-solid fa-basket-shopping"></i>  
-<span>${recuperer_quantitetotal_produit()}</span>
+<a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
+
+<span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
 
 <h1>Panier</h1>
@@ -51,9 +54,9 @@ export let Panier = (element) => {
 
    <div class="mt-3">
 
-    <button class="btn btn-danger" id="moins" type="button" class="btn">-</button>
+    <button class="btn btn-danger" id="moins" type="button" >-</button>
       <input id="valeur"  type="number" value="1">
-      <button class="btn btn-success" id="plus" type="button" class="btn">+</button><br>
+      <button class="btn btn-success" id="plus" type="button" >+</button><br>
 
       <button class="${produit.id}" id="envoier">Envoyer</button>
     </div>
@@ -81,6 +84,21 @@ export let Panier = (element) => {
         </thead>
          </table>
          </div>
+         ${modal(
+           "Supprimer tout",
+           "supprimertout1",
+           "btn btn-danger",
+           "Vous êtes sur le point de supprimer toute la liste de votre panier.",
+           "supprimertous"
+         )}
+        
+         ${modal(
+           "Acheter",
+           "acheter1",
+           "btn btn-success",
+           "Vous êtes sur le point de finaliser votre panier",
+           "acheter"
+         )}
      `;
 
   let moins = document.querySelectorAll("#moins");
@@ -113,12 +131,20 @@ export let Panier = (element) => {
     });
   });
 
-  let boutonsupptouts = document.querySelector("#supprimertous");
+  const boutonacheterfinal = document.querySelector("#acheter");
+  boutonacheterfinal.addEventListener("click", () => {
+    alert("Merci pour votre achat");
+    localStorage.removeItem("panier");
+    return Panier(element);
+  });
+  // -----------SUPPRIMER TOUS------------
+  const boutonsupptouts = document.querySelector("#supprimertous");
   boutonsupptouts.addEventListener("click", () => {
     localStorage.removeItem("panier");
     return Panier(element);
   });
 
+  // ------SUPPRIMER LA DONNEE DU PANIER-------
   let boutons = document.querySelectorAll(".supprimer");
   boutons.forEach((button) => {
     button.addEventListener("click", () => {

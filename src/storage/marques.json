@@ -1,38 +1,30 @@
 [
   {
     "id": 1,
-    "nom": "Marie Dubois",
-    "categorie": "marie.dubois@example.com",
-    "role": "admin"
+    "image": "/storage/img/imgmaisons/bouffondor.jpg",
+    "nom": "Bouffondor",
+    "description": "La maison Bouffondor est un véritable joyau caché au cœur de Poulard.<br>Ses élèves sont connus pour leurs humours espiègles et leurs blagues légendaires.<br>Ici, la devise est simple : <br> Rire, s'amuser et pète un coup!",
+    "chemin": "/Marque/Bouffoudor"
   },
   {
     "id": 2,
-    "nom": "Jean Martin",
-    "categorie": "jean.martin@example.com",
-    "role": "utilisateur"
+    "image": "/storage/img/imgmaisons/serpenretard.jpg",
+    "nom": "SerpentRetard",
+    "description": "La maison Serpent Retard est toujours à la traine sur son temps.<br>Ils ont un style vestimentaire et un comportement qui leurs sont propres.<br>Ici, la devise est simple :<br>Pourquoi être pressé quand on peut être à la traîne?",
+    "chemin": "/Marque/SerpentRetard"
   },
   {
     "id": 3,
-    "nom": "Sophie Lambert",
-    "categorie": "sophie.lambert@example.com",
-    "role": "admin"
+    "image": "/storage/img/imgmaisons/serdaigle.jpg",
+    "nom": "Serredaigle",
+    "description": "La maison Serre d'Aigle est un nid d'excellence.<br>Les élèves sont connus pour leurs sens aiguisée et leurs esprit vif.<br>Ici, la devise est simple:<br>Regardez de près, réfléchissez profondément et ne laissez jamais passer un détail insignifiant.",
+    "chemin": "/Marque/Serredaigle"
   },
   {
     "id": 4,
-    "nom": "Khalid Ben Ali",
-    "categorie": "khalid.benali@example.com",
-    "role": "utilisateur"
-  },
-  {
-    "id": 5,
-    "nom": "Laura Dubois",
-    "categorie": "laura.dubois@example.com",
-    "role": "admin"
-  },
-  {
-    "id": 6,
-    "nom": "Luc Lefevre",
-    "categorie": "luc.lefevre@example.com",
-    "role": "utilisateur"
+    "image": "/storage/img/imgmaisons/poufsouffle.jpg",
+    "nom": "Poufsouflle",
+    "description": "La maison Pouf Souffle est un havre de confort et de convivialité au sein même de Poulard.<br>Les élèves sont connus pour leur appétit insatiable et leur amour pour la sieste prolongée.<br>Ici, la devise est simple:<br>Mangez, dormez, recommencez!",
+    "chemin": "/Marque/Poufsouflle"
   }
 ]

@@ -4,9 +4,10 @@ import { produitCard } from "../Produits/Partials/produitCard";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 export const Categorie = (element) => {
   element.innerHTML = `
-  <p class="panier">
-<i class="fa-solid fa-basket-shopping"></i>  
-<span>${recuperer_quantitetotal_produit()}</span>
+<p class="panier">
+<a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
+
+<span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
       <div class="d-flex justify-content-between">
         <h1>Produits</h1>

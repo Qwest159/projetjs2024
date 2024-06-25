@@ -13,8 +13,9 @@ import { recuperer_quantitetotal_produit } from "../components/Panierquantite";
 export const Contact = (element) => {
   element.innerHTML = `
 <p class="panier">
-<i class="fa-solid fa-basket-shopping"></i>  
-<span>${recuperer_quantitetotal_produit()}</span>
+<a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
+
+<span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
         <h1>Contact</h1>
         <form>

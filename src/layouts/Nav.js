@@ -24,10 +24,17 @@ export const Nav = (element) => {
     // { href: "/Panier", text: panierquantite() },
   ];
 
-  const linkssousmenu = [
+  const linkscategories = [
     { href: "/Categorie/armes", text: "Armes" },
     { href: "/Categorie/vetements", text: "Vêtements" },
     { href: "/Categorie/accessoires", text: "Accessoires" },
+  ];
+
+  const linksmarques = [
+    { href: "/Marque/bouffondors", text: "Bouffondor" },
+    { href: "/Marque/serpentRetards", text: "SerpentRetard" },
+    { href: "/Marque/serredaigles", text: "Serredaigle" },
+    { href: "/Marque/poufsouflles", text: "Poufsouflle" },
   ];
   // { href: "/categorie", text: "Categories" },
   element.innerHTML = `
@@ -51,13 +58,24 @@ export const Nav = (element) => {
           </ul>
           
           <div class="dropdown">
-
-          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Catégorie
-  </button>
+          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Catégories</button>
   <ul class="dropdown-menu">
+  ${linkscategories
+    .map(
+      (link) => `
+                <li class="nav-item">
+                  <a class="nav-link" href="${link.href}">${link.text}</a>
+                </li>
+                `
+    )
+    .join("")}
+</ul>
+        </div>
 
-  ${linkssousmenu
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Marques</button>
+  <ul class="dropdown-menu">
+  ${linksmarques
     .map(
       (link) => `
                 <li class="nav-item">

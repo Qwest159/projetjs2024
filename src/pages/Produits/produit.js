@@ -28,8 +28,9 @@ export const Produit = (element) => {
 
   element.innerHTML = `
 <p class="panier">
-<i class="fa-solid fa-basket-shopping"></i>  
-<span>${recuperer_quantitetotal_produit()}</span>
+<a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
+
+<span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
     <img src="${produit.image}" class="img-thumbnail  img-fluid" alt="${
     produit.nom
@@ -38,7 +39,7 @@ export const Produit = (element) => {
 <h5 class="card-title">${produit.nom}</h5>
 <p class="card-text">${produit.description}</p>
 <p class="card-text">${produit.prix}</p>
- <p class="card-text">${categorieBadge(produit.categorie)}</p>
+ <p class="card-text">${categorieBadge(produit.categorie, produit.marque)}</p>
  <div class="mt-3">
  <label for="valeur">Nombre d'exemplaires que vous souhaitez:</label><br>
     ${button()}
@@ -58,6 +59,7 @@ export const Produit = (element) => {
   let envoier = document.querySelector("#envoier");
   envoier.addEventListener("click", () => {
     const valeur = document.querySelector("#valeur");
+
     const quantiter = valeur.value;
     if (quantiter) {
       ajouterPanier(produits, quantiter);

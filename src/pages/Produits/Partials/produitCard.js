@@ -28,8 +28,13 @@ export const produitCard = (produit) => {
 
           <h5 class="card-title">${produit.nom}</h5>
           <p class="card-text descriptions">${produit.description}</p>
-          <p class="card-text">${produit.prix}</p>
-           <p class="card-text"> ${categorieBadge(produit.categorie)}</p>
+           <p class="card-text"> ${categorieBadge(
+             produit.categorie,
+             produit.marque
+           )}</p>
+          <p class="card-text">Prix: ${produit.prix}</p>
+          
+       
           
         </div>
       </a>
