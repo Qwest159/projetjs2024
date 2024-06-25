@@ -129,12 +129,14 @@ export let Panier = (element) => {
       return Panier(element);
     });
   });
-
+  // -------ACHETER FINAL------
   const boutonacheterfinal = document.querySelector("#acheter");
   boutonacheterfinal.addEventListener("click", () => {
-    alert("Merci pour votre achat");
-    localStorage.removeItem("panier");
-    return Panier(element);
+    if (recuperer_prixtotal_produit() > "1") {
+      alert("Merci pour votre achat");
+      localStorage.removeItem("panier");
+      return Panier(element);
+    }
   });
   // -----------SUPPRIMER TOUS------------
   const boutonsupptouts = document.querySelector("#supprimertous");
