@@ -6,9 +6,19 @@ img {
   width: 25em !important;
   height: 15em !important;
 }
+.imagecaroussel {
+  float: right !important;
+  height: 11em !important;
+  width: 18em !important;
+}
 nav a:hover {
   border-bottom: 3px solid red !important
   ;
+}
+.buttondrop {
+  background-color: rgba(255, 255, 255, 0) !important;
+  color: rgb(60, 60, 60) !important;
+  border: none !important;
 }
 a {
   text-decoration: none;

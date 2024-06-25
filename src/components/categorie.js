@@ -42,7 +42,9 @@ export const categorie = (categories, marques) => {
             </h2>
             <div id="panelsStayOpen-collapse-${marque.nom}" class="accordion-collapse collapse">
               <div class="accordion-body">
+               <img class="imagecaroussel" src="${marque.image}" alt="${marque.nom}">
                 <p class="fs-5 text" >${marque.description}</p>
+               
                 <p class="w-100 text-center  "><a class="text-info  .fs-3 text fw-bold" href="${marque.chemin}">Cliquez ici pour voir la catégorie ${marque.nom}</a></p>
               </div>
             </div>

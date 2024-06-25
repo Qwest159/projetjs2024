@@ -58,7 +58,7 @@ export const Nav = (element) => {
           </ul>
           
           <div class="dropdown">
-          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Catégories</button>
+          <button class="dropdown-toggle buttondrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">Catégories</button>
   <ul class="dropdown-menu">
   ${linkscategories
     .map(
@@ -71,9 +71,8 @@ export const Nav = (element) => {
     .join("")}
 </ul>
         </div>
-
         <div class="dropdown">
-          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Marques</button>
+          <button class="dropdown-toggle buttondrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">Marques</button>
   <ul class="dropdown-menu">
   ${linksmarques
     .map(

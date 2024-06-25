@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "image": "/storage/img/imgmaisons/bouffondor.jpg",
+    "image": "/img/imgmarque/bouffondor.jpg",
     "nom": "Bouffondor",
     "description": "La maison Bouffondor est un véritable joyau caché au cœur de Poulard.<br>Ses élèves sont connus pour leurs humours espiègles et leurs blagues légendaires.<br>Ici, la devise est simple : <br> Rire, s'amuser et pète un coup!",
     "chemin": "/Marque/bouffondors"
   },
   {
     "id": 2,
-    "image": "/storage/img/imgmaisons/serpenretard.jpg",
+    "image": "/img/imgmarque/serpenretard.jpg",
     "nom": "SerpentRetard",
     "description": "La maison Serpent Retard est toujours à la traine sur son temps.<br>Ils ont un style vestimentaire et un comportement qui leurs sont propres.<br>Ici, la devise est simple :<br>Pourquoi être pressé quand on peut être à la traîne?",
     "chemin": "/Marque/serpentRetards"
   },
   {
     "id": 3,
-    "image": "/storage/img/imgmaisons/serdaigle.jpg",
+    "image": "/img/imgmarque/serdaigle.jpg",
     "nom": "Serredaigle",
     "description": "La maison Serre d'Aigle est un nid d'excellence.<br>Les élèves sont connus pour leurs sens aiguisée et leurs esprit vif.<br>Ici, la devise est simple:<br>Regardez de près, réfléchissez profondément et ne laissez jamais passer un détail insignifiant.",
     "chemin": "/Marque/serredaigles"
   },
   {
     "id": 4,
-    "image": "/storage/img/imgmaisons/poufsouffle.jpg",
+    "image": "/img/imgmarque/poufsouffle.jpg",
     "nom": "Poufsouflle",
     "description": "La maison Pouf Souffle est un havre de confort et de convivialité au sein même de Poulard.<br>Les élèves sont connus pour leur appétit insatiable et leur amour pour la sieste prolongée.<br>Ici, la devise est simple:<br>Mangez, dormez, recommencez!",
     "chemin": "/Marque/poufsouflles"
