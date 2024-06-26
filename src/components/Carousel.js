@@ -14,6 +14,7 @@ import categories from "/src/storage/categories.json";
  * @returns {string} HTML string
  */
 export const Carousel = (images) => {
+  // affiche les images des produits sur la page acceuil
   return `
 
   <div class="d-flex p-2 d-flex justify-content-center w-100">

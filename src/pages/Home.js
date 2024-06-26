@@ -15,7 +15,7 @@ export const Home = (element) => {
   element.innerHTML = `
 <p class="panier">
 <a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
-
+<!-- affiche le panier -->
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
     <h1 class="text-center">Accueil</h1>

@@ -1,7 +1,6 @@
 import { CardsList } from "../../components/CardsList";
 import { DataTable } from "../../components/DataTable";
 import produits from "../../storage/produits.json";
-import marques from "../../storage/marques.json";
 import { produitCard } from "./Partials/produitCard";
 import { produitRow } from "./Partials/produitRow";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
@@ -19,7 +18,7 @@ export const Produits = (element) => {
   element.innerHTML = `
 <p class="panier">
 <a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
-
+<!-- affiche le panier -->
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
    
@@ -41,13 +40,20 @@ export const Produits = (element) => {
   // Fonction pour afficher les produits en fonction du mode d'affichage
   const render = () => {
     if (mode === "grid") {
-      CardsList(produitsList, produits, produitCard, ["nom", "categorie"]);
+      CardsList(produitsList, produits, produitCard, [
+        // recherche du produit
+        "nom",
+        "categorie",
+        "marque",
+      ]);
     } else if (mode === "table") {
       DataTable(
         produitsList,
         produits,
         produitRow,
-        ["nom", "categorie"],
+        // recherche du produit
+        ["nom", "categorie", "marque"],
+        // le nom des table head
         ["Nom", "Description", "Catégorie", "Detail"]
       );
     }

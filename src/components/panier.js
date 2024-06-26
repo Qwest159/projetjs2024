@@ -1,4 +1,5 @@
 export let Paniers = (element) => {
+  // affichage de mon panier
   element.innerHTML = `
   <h1>Panier</h1>
     <div class="container text-center">

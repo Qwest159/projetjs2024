@@ -8,6 +8,7 @@ function recupPanier() {
     return paniers;
   }
 }
+// affiche la quantité totals du panier
 export function recuperer_quantitetotal_produit() {
   let panier = recupPanier();
   let total = 0;

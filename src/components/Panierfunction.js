@@ -1,10 +1,5 @@
-// let json = JSON.stringify(produit);
-// console.log(json);
-
-// let test = JSON.parse(json);
-// console.log(test);
-
 function sauvPanier(panier) {
+  // mettre dans le local storage
   localStorage.setItem("panier", JSON.stringify(panier));
 }
 
@@ -16,25 +11,18 @@ function recupPanier() {
     return JSON.parse(panier);
   }
 }
+// ajoute dans le local storage
 function ajouterPanier(produit) {
   let panier = recupPanier();
 
   const url = new URL(window.location.href);
   const produitId = parseInt(url.searchParams.get("id"));
 
-  //produittrouver = le produit en question
   let produitpush = produit.find((p) => p.id === produitId);
 
   console.log(produitpush.nom);
 
   let trouverproduit = panier.find(() => produitId === produit.id);
-
-  //   let produitJSON = JSON.stringify(produit);
-
-  // // Ajouter l'objet JSON dans le localStorage avec une clé spécifique
-  // localStorage.setItem('produit1', produitJSON);
-
-  // console.log(trouverproduit);
 
   if (trouverproduit != undefined) {
     trouverproduit.quantité++;
@@ -83,5 +71,3 @@ function recuperer_prixtotal_produit() {
   }
   return total;
 }
-
-// Sélectionner l'élément input et le bouton

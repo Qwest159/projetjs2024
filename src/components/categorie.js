@@ -1,4 +1,5 @@
 export const categorie = (categories, marques) => {
+  // affichage sous forme accordeon les donnees des categorie et marques
   return `
     <h1 class="text-center ">Catégories</h1>
     
@@ -23,11 +24,7 @@ export const categorie = (categories, marques) => {
         `
           )
           .join("")}
-    
 
-
-
-      
       <h1 class="text-center ">Marques</h1>
   
         ${marques
@@ -52,10 +49,6 @@ export const categorie = (categories, marques) => {
          </div>
         `
           )
-          .join("")}
- 
-    
-      
-      
+          .join("")}    
       `;
 };

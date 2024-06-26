@@ -4,14 +4,16 @@ import marques from "../../storage/marques.json";
 import { produitCard } from "../Produits/Partials/produitCard";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 export const Marque = (element) => {
+  // recupere le chemin actuelle
   const chemin = window.location.pathname;
   element.innerHTML = `
 <p class="panier">
 <a href="/Panier"><i class="fa-solid fa-basket-shopping"></i>  
-
+<!-- affiche le panier + affiche la quantité d'article -->
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
-
+<!-- boucle dans le json(marque) pour afficher les marques. 
+ Le bon chemin pour les bonnes valeurs correspondants -->
       ${marques
         .map(
           (marque) => `
@@ -25,6 +27,7 @@ export const Marque = (element) => {
 
   const produitsList = element.querySelector("#produits-list");
 
+  // les chemins correspondant aux valeurs
   if (chemin === "/Marque/bouffondors") {
     const Bouffondors = produits.filter(
       (element) => element.marque === "Bouffondor"

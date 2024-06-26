@@ -4,6 +4,7 @@ import categories from "../../storage/categories.json";
 import { produitCard } from "../Produits/Partials/produitCard";
 import { recuperer_quantitetotal_produit } from "../../components/Panierquantite";
 export const Categorie = (element) => {
+  // recupere le chemin actuelle
   const chemin = window.location.pathname;
   element.innerHTML = `
 <p class="panier">
@@ -12,7 +13,8 @@ export const Categorie = (element) => {
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
      
-
+<!-- boucle dans le json(categorie) pour afficher les categories. 
+ Le bon chemin pour les bonnes valeurs correspondants -->
       ${categories
         .map(
           (categorie) => `
@@ -24,16 +26,12 @@ export const Categorie = (element) => {
         `
         )
         .join("")}
-   
-
-
-
       </div>
       <div id="produits-list"></div>
       `;
 
   const produitsList = element.querySelector("#produits-list");
-
+  // les chemins correspondant aux valeurs
   if (chemin === "/Categorie/armes") {
     const armes = produits.filter((element) => element.categorie === "arme");
     CardsList(produitsList, armes, produitCard, ["nom"]);
