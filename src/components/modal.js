@@ -8,7 +8,7 @@ export let modal = (
   // affichage pour demander une confirmation aux utilisateurs
   return `
 
-<button type="button" class="${couleurboutton}" data-bs-toggle="modal" data-bs-target="#${idtitre}">
+<button type="button" class="${couleurboutton} fw-bold" data-bs-toggle="modal" data-bs-target="#${idtitre}">
 ${titre}
 </button>
 <!-- Modal -->

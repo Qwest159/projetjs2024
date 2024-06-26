@@ -62,9 +62,9 @@ export let Panier = (element) => {
 
                 </td>
                 <td>${produit.nom}</td>
-                <td>${produit.prix}</td>
+                <td class="fw-bold">${produit.prix}</td>
                 
-                <td>${recuperer_prix_produit(produit)} €</td>
+                <td class="fw-bold">${recuperer_prix_produit(produit)} €</td>
                 <td>
                     <button id="${
                       produit.id

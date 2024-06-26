@@ -32,7 +32,7 @@ export const produitCard = (produit) => {
              produit.categorie,
              produit.marque
            )}</p>
-          <p class="card-text">Prix: ${produit.prix}</p>
+          <p class="card-text fw-bold">Prix: ${produit.prix}</p>
           
        
           

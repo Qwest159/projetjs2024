@@ -40,7 +40,7 @@ export const Produit = (element) => {
 
 <h5 class="card-title">${produit.nom}</h5>
 <p class="card-text">${produit.description}</p>
-<p class="card-text">${produit.prix}</p>
+<p class="card-text fw-bold"> Prix: ${produit.prix}</p>
  <p class="card-text">${categorieBadge(produit.categorie, produit.marque)}</p>
  <div class="mt-3">
  <label for="valeur">Nombre d'exemplaires que vous souhaitez:</label><br>
