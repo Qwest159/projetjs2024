@@ -11,7 +11,7 @@ export const Marque = (element) => {
 
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
-      <div class="d-flex justify-content-between">
+
       ${marques
         .map(
           (marque) => `
@@ -19,7 +19,7 @@ export const Marque = (element) => {
         `
         )
         .join("")}
-      </div>
+
       <div id="produits-list"></div>
       `;
 

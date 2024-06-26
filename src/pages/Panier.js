@@ -55,10 +55,10 @@ export let Panier = (element) => {
    <div class="mt-3">
 
     <button class="btn btn-danger fw-bolder" id="moins" type="button" >-</button>
-      <input id="valeur"  type="number" value="1">
+      <input  class="valeur" type="number" value="1">
       <button class="btn btn-success" id="plus" type="button" >+</button><br>
 
-      <button class="${produit.id}" id="envoier">Envoyer</button>
+      <button class="envoier" id="${produit.id}">Envoyer</button>
     </div>
 
                 </td>
@@ -83,6 +83,7 @@ export let Panier = (element) => {
         </thead>
          </table>
          </div>
+         <div class="d-flex justify-content-between m-3">
          ${modal(
            "Supprimer tout",
            "supprimertout1",
@@ -98,6 +99,7 @@ export let Panier = (element) => {
            "Vous êtes sur le point de finaliser votre panier",
            "acheter"
          )}
+         </div>
      `;
 
   let moins = document.querySelectorAll("#moins");
@@ -105,7 +107,7 @@ export let Panier = (element) => {
 
   moins.forEach((buttonsmoins, index) => {
     buttonsmoins.addEventListener("click", () => {
-      let valeur = document.querySelectorAll("#valeur")[index];
+      let valeur = document.querySelectorAll(".valeur")[index];
       console.log(valeur);
       valeur.value = parseFloat(valeur.value) - 1;
     });
@@ -113,17 +115,16 @@ export let Panier = (element) => {
 
   plus.forEach((bouttonsplus, index) => {
     bouttonsplus.addEventListener("click", () => {
-      let valeur = document.querySelectorAll("#valeur")[index];
+      let valeur = document.querySelectorAll(".valeur")[index];
       valeur.value = parseFloat(valeur.value) + 1;
     });
   });
 
-  let boutonsvaleur = document.querySelectorAll("#envoier");
+  let boutonsvaleur = document.querySelectorAll(".envoier");
   boutonsvaleur.forEach((button, index) => {
     button.addEventListener("click", () => {
-      console.log(button);
-      let id = button.getAttribute("class");
-      let valeur = document.querySelectorAll("#valeur")[index];
+      let id = button.getAttribute("id");
+      let valeur = document.querySelectorAll(".valeur")[index];
       console.log(id);
       ajouterPanier(id, valeur.value);
       return Panier(element);

@@ -20,7 +20,7 @@ export const produitCard = (produit) => {
     <div class="col p-2 ">
       <a class="card produit-link" href="/produit?id=${produit.id}">
         <div class="card-body">
-        
+         
         
         <figure class="figure"><img src="${
           produit.image

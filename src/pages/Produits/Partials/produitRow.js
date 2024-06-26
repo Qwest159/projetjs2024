@@ -18,7 +18,7 @@ export const produitRow = (produit) => {
     <tr>
       <td>${produit.nom}</td>
       <td>${produit.description}</td>
-      <td>${categorieBadge(produit.categorie)}</td>
+      <td>${categorieBadge(produit.categorie, produit.marque)}</td>
       <td><a class="btn btn-primary btn-sm" href="/produit?id=${
         produit.id
       }"><i class="ri-search-eye-line"></i></a></td>

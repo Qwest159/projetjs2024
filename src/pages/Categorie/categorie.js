@@ -11,17 +11,20 @@ export const Categorie = (element) => {
 
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
-      <div class="d-flex justify-content-between">
+     
 
-      <div class="d-flex justify-content-between">
       ${categories
         .map(
           (categorie) => `
-  ${chemin === categorie.chemin ? `<h1> Marque: ${categorie.nom}</h1>` : ""}
+  ${
+    chemin === categorie.chemin
+      ? `<h1 class="text-center"> Catégorie: ${categorie.nom}</h1>`
+      : ""
+  }
         `
         )
         .join("")}
-      </div>
+   
 
 
 

@@ -36,7 +36,7 @@ export const categorie = (categories, marques) => {
                 <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-${marque.nom}" aria-expanded="true" aria-controls="panelsStayOpen-collapse-${marque.nom}">
+              <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-${marque.nom}" aria-expanded="true" aria-controls="panelsStayOpen-collapse-${marque.nom}">
                 <h3 class="text-center w-100">${marque.nom}</h3>
               </button>
             </h2>

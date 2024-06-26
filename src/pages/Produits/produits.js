@@ -22,7 +22,7 @@ export const Produits = (element) => {
 
 <span>${recuperer_quantitetotal_produit()}</span></a>
 </p>
-    <div class="d-flex justify-content-between">
+   
       <h1>Produits</h1>
       <div>
         <button id="grid-mode-btn" class="btn btn-sm btn-secondary mr-3">
@@ -32,7 +32,7 @@ export const Produits = (element) => {
           <i class="ri-table-line"></i>
         </button>
       </div>
-    </div>
+ 
     <div id="produits-list"></div>
     `;
 
